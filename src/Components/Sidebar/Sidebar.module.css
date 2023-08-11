@@ -1,0 +1,72 @@
+.sidebar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  overflow-y: scroll;
+  height: 610px;
+}
+.top {
+  margin-bottom: 35px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  background: white;
+}
+.top > h2 {
+  text-align: center;
+}
+
+.middle > h5 {
+  margin-bottom: 10px;
+  color: #989898;
+  font-weight: 500;
+}
+
+.middle {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar::-webkit-scrollbar {
+  display: none;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  margin-bottom: 0;
+  height: 40px;
+  width: 100%;
+  align-items: center;
+  padding: 0 20px;
+  border-radius: var(--br);
+  margin-bottom: 5px;
+}
+.link:hover{
+  background-color: var(--tm);
+}
+
+
+.side_bn{
+  display: none;
+}
+
+@media screen and (max-width:1000px){
+
+  .top{
+    justify-content: space-between;
+  }
+  .side_bn{
+    display: block;
+    background: none;
+    border: none;
+    font-size: 30px;
+  }
+
+  .sidebar {
+    height: max-content;
+}
+}
