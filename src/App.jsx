@@ -11,10 +11,21 @@ import Reports from './Pages/Reports/Reports'
 import Schedule from './Pages/Schedule/Schedule'
 import AdminLogin from './Pages/AdminLogin/AdminLogin'
 
+// import 'dotenv/config';
+
+
+// import dotenv from 'dotenv'
+// dotenv.config()
+
+
+
 
 const App = () => {
   const location = useLocation();
   const path = location.pathname;
+
+
+  alert(import.meta.env.VITE_DEMO)
 
 
   return (
