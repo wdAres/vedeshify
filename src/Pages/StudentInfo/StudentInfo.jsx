@@ -4,9 +4,10 @@ import PagePath from '../../Components/PagePath/PagePath'
 import Heading from '../../Components/Heading/Heading'
 import classes from './StudentInfo.module.css'
 import Tile from '../../Components/Tile/Tile'
-import BlackButton from '../../Components/BlackButton/BlackButton'
 import FilterButton from '../../Components/FilterButton/FilterButton'
 import MainTable from '../../Components/MainTable/MainTable'
+import Container from '../../UI/Container/Container'
+
 // Tile Data 1
 const td1 = [
   {
@@ -47,24 +48,27 @@ const table_data = [
   }
 ]
 
-const table_headings = ['Student  Name','Phone','Grade','City','Action']
-const table_keys = ['student_name','phone_number','grade','city']
+const table_headings = ['Student  Name', 'Phone', 'Grade', 'City', 'Action']
+const table_keys = ['student_name', 'phone_number', 'grade', 'city']
 
 
 const StudentInfo = () => {
   return (
     <React.Fragment>
       <PagePath />
-      <Heading heading={'All Student'} p={'You can see your all Students you have'} />
-      <div className={classes.grid}>
-        <Tile data={td1} />
-        <Tile data={td2} direction={'row'} />
-      </div>
-      <div className={classes.filter}>
-        <FilterButton />
-        <BlackButton cls={classes.bb}>Add Student</BlackButton>
-      </div>
+      <Heading heading={'All Counselors'} p={'See All Counselor and their details here'} />
+
+      <Container cls={classes.con}>
+        <div className={classes.filter}>
+          <FilterButton />
+        </div>
+
+        <div className={classes.grid}>
+          <Tile data={td1} />
+          <Tile data={td2} direction={'row'} />
+        </div>
         <MainTable det={true} headings={table_headings} keys={table_keys} data={table_data} />
+      </Container>
     </React.Fragment>
   )
 }

@@ -10,6 +10,9 @@ import Chats from './Pages/Chats/Chats'
 import Reports from './Pages/Reports/Reports'
 import Schedule from './Pages/Schedule/Schedule'
 import AdminLogin from './Pages/AdminLogin/AdminLogin'
+import Support from './Pages/Support/Support'
+import Inquiries from './Pages/Inquiries/Inquiries'
+import InquiryDetails from './Pages/Inquiries/InquiryDetails/InquiryDetails'
 
 // import 'dotenv/config';
 
@@ -25,7 +28,7 @@ const App = () => {
   const path = location.pathname;
 
 
-  alert(import.meta.env.VITE_DEMO)
+  // alert(import.meta.env.VITE_DEMO)
 
 
   return (
@@ -43,9 +46,9 @@ const App = () => {
           <main className='main_container'>
             <Routes>
               <Route path='/dashboard' element={<Dashboard />} />
-              <Route path='student'>
+              <Route path='counselors'>
                 <Route index element={<StudentInfo />} />
-                <Route path='/student/details/' element={<StudentDetails />} />
+                <Route path='/counselors/details/' element={<StudentDetails />} />
               </Route>
               <Route path='payment'>
                 <Route index element={<Payment />} />
@@ -61,6 +64,13 @@ const App = () => {
               </Route>
               <Route path='schedule'>
                 <Route index element={<Schedule />} />
+              </Route>
+              <Route path='support'>
+                <Route index element={<Support />} />
+              </Route>
+              <Route path='inquiries'>
+                <Route index element={<Inquiries />} />
+                <Route path='/inquiries/details/' element={<InquiryDetails />} />
               </Route>
             </Routes>
           </main>

@@ -29,10 +29,15 @@
 
 .grid>div:nth-child(5) {
     grid-column: 1 / span 2;
+    background: #FFE1DD;
+    border-color: #FFE1DD
 }
 
 .grid>div:nth-child(6) {
     grid-column: span 4;
+    background: black;
+    color: white;
+    border-color: black;
 }
 
 @media screen and (max-width:900px) {

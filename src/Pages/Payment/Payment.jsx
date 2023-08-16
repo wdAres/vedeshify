@@ -9,6 +9,8 @@ import MainTable from '../../Components/MainTable/MainTable'
 import SidebarOverlay from '../../Components/SidebarOverlay/SidebarOverlay'
 import PaymentChart from '../../Components/PaymentChart/PaymentChart'
 import PaymentSidebar from '../../Components/SidebarModals/PaymentSidebar'
+import FilterButton from '../../Components/FilterButton/FilterButton'
+import SearchBar from '../../Components/SearchBar/SearchBar'
 
 const data = [
   {
@@ -48,23 +50,59 @@ const t_data = [
 const t_key = ['id', 'date', 'amount', 'payment']
 const t_headings = ['Transcation ID', 'Date', 'Amount', 'Payment', 'Actions']
 
+
+// Tile Data 1
+const td1 = [
+  {
+    h5: 'Total Received amount',
+    h1: '₹34,000',
+    p: 'See here your total amount received from admin side against for sessions'
+  }
+]
+
+// Tile Data 2
+const td2 = [
+  {
+    h5: 'Total Received amount',
+    h1: '₹34,000',
+    p: 'See here your total amount received from admin side against for sessions'
+  },
+  {
+    h5: 'Total Received amount',
+    h1: '₹34,000',
+    p: 'See here your total amount received from admin side against for sessions'
+  }
+]
+
+
+
 const Payment = () => {
 
-  const [viewSidebar,setSidebar] = useState(false)
+  const [viewSidebar, setSidebar] = useState(false)
 
   return (
     <Fragment>
       <PagePath />
       <Heading heading={'Payments'} p={'You can see your Payments here and manage them'} />
-      <div className={classes.grid}>
-        <Container>
-          <PaymentChart />
-        </Container>
-        <Tile data={data} direction={'column'} />
-      </div>
-      <Heading  heading={'Track Payments'} p={'You can see your Payments here and manage them'} btn={'Withdraw Amount'} />
-      <MainTable detFunc={setSidebar} data={t_data} headings={t_headings} keys={t_key}/>
-      <SidebarOverlay heading={'Payment Details'} sb_value={viewSidebar} sb_func={setSidebar} >
+
+      <Container cls={classes.con}>
+        <div className={classes.filter}>
+          <FilterButton />
+        </div>
+
+        <div className={classes.grid}>
+          <Tile data={td1} />
+          <Tile data={td2} direction={'row'} />
+        </div>
+        <div className={classes.flex}>
+        <Heading cls={classes.heading} heading={'Payment History'} p={'You can see your Payments here and manage them'} />
+        <SearchBar cls={classes.sb} />
+        </div>
+        <MainTable detFunc={setSidebar} data={t_data} headings={t_headings} keys={t_key} />
+      </Container>
+
+
+      <SidebarOverlay b2={'Download Receipt'} heading={'Payment Details'} sb_value={viewSidebar} sb_func={setSidebar} >
         <PaymentSidebar />
       </SidebarOverlay>
     </Fragment>

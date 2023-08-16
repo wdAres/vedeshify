@@ -4,7 +4,7 @@ import BlackButton from '../BlackButton/BlackButton'
 
 const Heading = (props) => {
     return (
-        <div className={classes.container}>
+        <div className={`${classes.container} ${props.cls}`}>
             <div>
                 <h3>{props.heading}</h3>
                 <p>{props.p}</p>

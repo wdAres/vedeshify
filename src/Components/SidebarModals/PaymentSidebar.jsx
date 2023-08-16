@@ -75,7 +75,7 @@ const PaymentSidebar = () => {
             <CopiableDiv heading={'Transaction ID'} id={'TXCSID804982839'} />
             <CopiableDiv heading={'Reference Number'} id={'REF948349JHSJK8'} />
             <div className={classes.box}>
-                <h4 className={classes.heading}>Class Details</h4>
+                <h4 className={classes.heading}>Session Details</h4>
                 {classDetails.map((element, index) => (
                     <FlexDiv key={index} title={element.title} value={element.value} />
                 ))}

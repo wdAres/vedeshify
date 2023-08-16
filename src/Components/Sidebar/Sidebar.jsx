@@ -21,8 +21,8 @@ const Sidebar = (props) => {
         <NavLink className={classes.link} to={'/dashboard'}>
           Dashboard
         </NavLink>
-        <NavLink className={classes.link} to={'/student'}>
-          Student Info
+        <NavLink className={classes.link} to={'/counselors'}>
+          Counselors
         </NavLink>
         <NavLink className={classes.link} to={'/payment'}>
           Payment
@@ -33,11 +33,17 @@ const Sidebar = (props) => {
         <NavLink className={classes.link} to={'/chats'}>
           Chats
         </NavLink>
+        <NavLink className={classes.link} to={'/schedule'}>
+          Schedule
+        </NavLink>
+        <NavLink className={classes.link} to={'/inquiries'}>
+        Inquiries
+        </NavLink>
         <NavLink className={classes.link} to={'/reports'}>
           Reports
         </NavLink>
-        <NavLink className={classes.link} to={'/schedule'}>
-          Schedule
+        <NavLink className={classes.link} to={'/support'}>
+          Support
         </NavLink>
         <br />
         <h5>Generals</h5>
@@ -49,9 +55,6 @@ const Sidebar = (props) => {
         </NavLink>
         <NavLink className={classes.link} to={'/'}>
           Profile
-        </NavLink>
-        <NavLink className={classes.link} to={'/'}>
-          Support
         </NavLink>
         <NavLink className={classes.link} to={'/'}>
           Notifications
