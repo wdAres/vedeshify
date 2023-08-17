@@ -172,7 +172,7 @@ const ListCalendar = () => {
             </div>
 
             {/* Reschedule Modal */}
-            <RescheduleModal isPopup={popup} popupFunc={setPopup} /> 
+            {/* <RescheduleModal isPopup={popup} popupFunc={setPopup} />  */}
 
         </Container>
     )

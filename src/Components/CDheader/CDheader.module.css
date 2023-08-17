@@ -1,0 +1,46 @@
+.header   {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    height: 180px;
+    position: relative;
+    padding: 30px;
+    border-radius: var(--br);
+}
+
+.header > h2 {
+    font-weight: 500;
+}
+
+.det_box   {
+    display: flex;
+    column-gap: 20px;
+    margin: 20px 0 20px;
+}
+
+.det_box > div {
+    border-right: 1px solid currentColor;
+    padding-right: 20px;
+}
+
+.det_box > div p {
+    font-size: 11px;
+}
+
+.det_box > div:last-child {
+    border-right: none;
+}
+
+.header > img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+
+@media screen and (max-width:500px) {
+    .header > img {
+        display: none;
+    }
+}

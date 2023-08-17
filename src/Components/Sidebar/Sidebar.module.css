@@ -18,6 +18,11 @@
   text-align: center;
 }
 
+.top > img{
+  margin-right: auto;
+}
+
+
 .middle > h5 {
   margin-bottom: 10px;
   color: #989898;
@@ -46,7 +51,8 @@
   margin-bottom: 5px;
 }
 .link:hover{
-  background-color: var(--tm);
+  background-color: black;
+  color: white;
 }
 
 

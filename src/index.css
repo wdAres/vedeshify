@@ -16,7 +16,9 @@
 
 /* Sidebar Active */
 .active{
-  background-color: var(--tm);
+  /* background-color: var(--tm); */
+  background-color: black;
+  color: white;
 }
 
 
@@ -27,4 +29,13 @@
 button{
   font-family: inherit ;
   cursor: pointer;
+}
+
+div{
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; 
+}
+
+div::-webkit-scrollbar {
+  display: none;
 }

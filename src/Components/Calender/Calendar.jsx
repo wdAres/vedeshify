@@ -41,8 +41,8 @@ const Calendar = () => {
         initialView="dayGridMonth"
         eventContent={renderEventContent}
         events={[
-          { title: 'event 1', date: '2023-07-01',bg:'0013qefs' },
-          { title: 'event 2', date: '2023-07-02',bg:'33fkmwkm' }
+          { title: 'event 1', date: '2023-08-01',bg:'0013qefs' },
+          { title: 'event 2', date: '2023-08-05',bg:'33fkmwkm' }
         ]}
         
       />

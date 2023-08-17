@@ -46,9 +46,9 @@ const App = () => {
           <main className='main_container'>
             <Routes>
               <Route path='/dashboard' element={<Dashboard />} />
-              <Route path='counselors'>
+              <Route path='students'>
                 <Route index element={<StudentInfo />} />
-                <Route path='/counselors/details/' element={<StudentDetails />} />
+                <Route path='/students/details/' element={<StudentDetails />} />
               </Route>
               <Route path='payment'>
                 <Route index element={<Payment />} />

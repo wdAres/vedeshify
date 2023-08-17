@@ -56,7 +56,7 @@ const StudentInfo = () => {
   return (
     <React.Fragment>
       <PagePath />
-      <Heading heading={'All Counselors'} p={'See All Counselor and their details here'} />
+      <Heading heading={'All Students'} p={'See All Counselor and their details here'} />
 
       <Container cls={classes.con}>
         <div className={classes.filter}>

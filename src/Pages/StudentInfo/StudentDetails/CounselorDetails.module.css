@@ -1,0 +1,36 @@
+.btn_container {
+    border-radius: var(--br);
+    overflow: hidden;
+    width: max-content;
+    margin-bottom: 30px;
+}
+
+.btn_container>button {
+    height: 40px;
+    padding: 0 20px;
+    font-weight: 500;
+    background: white;
+    border: none;
+    border-right: 1px solid var(--border);
+}
+
+.btn_container>button:last-child {
+    border-right: none;
+}
+
+.active {
+    background: black !important;
+    color: white;
+}
+
+@media screen and (max-width:700px){
+    .btn_container {
+        width: 100%;
+        display: flex;
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+    }
+    .btn_container>button {
+        width: 100%;
+    }
+}

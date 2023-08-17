@@ -1,0 +1,28 @@
+.table{
+    display: flex;
+    flex-direction: column;
+    /* row-gap: 5px; */
+}
+.table > .row .item {
+    width: 25%;
+    text-align: center;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #676565;
+    font-size: 14px;
+}
+.table > .row:nth-child(1) .item {
+    font-weight: 500;
+}
+.table > .row {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid var(--border);
+    border-radius: var(--br);
+}
+.table > .row:nth-child(1) {
+    background: #F1F1F1;
+    border-color: #F1F1F1 !important;
+}

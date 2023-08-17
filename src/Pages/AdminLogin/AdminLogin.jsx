@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import classes from './AdminLogin.module.css'
 import eye_img from '../../assets/eye.png'
+import logo from '../../assets/logo.png'
 import { useNavigate } from 'react-router-dom'
 
 const AdminLogin = () => {
@@ -59,8 +60,8 @@ const AdminLogin = () => {
     return (
         <div className={classes.container}>
             <div className={classes.first_div}>
-                {/* <img src={Logo} alt="" /> */}
-                <h1>TUTORAZZI</h1>
+                <img src={logo} alt="" />
+                {/* <h1>TUTORAZZI</h1> */}
             </div>
             <form className={classes.form} onSubmit={formSubmissionHandler}>
                 <div className={classes.input_div}>

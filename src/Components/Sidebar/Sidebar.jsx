@@ -4,15 +4,13 @@ import { NavLink } from 'react-router-dom'
 import { RxCross2 } from 'react-icons/rx'
 // import dp
 import img from '../../assets/dp.png'
-
+import logo from '../../assets/logo.png'
 
 const Sidebar = (props) => {
   return (
     <div className={classes.sidebar}>
       <div className={classes.top}>
-        <h2>
-          Tutorazzi
-        </h2>
+        <img src={logo} alt="" />
         <button className={classes.side_bn} onClick={() => { props.onSideberBtn() }}><RxCross2 /></button>
       </div>
 
@@ -21,15 +19,15 @@ const Sidebar = (props) => {
         <NavLink className={classes.link} to={'/dashboard'}>
           Dashboard
         </NavLink>
-        <NavLink className={classes.link} to={'/counselors'}>
-          Counselors
+        <NavLink className={classes.link} to={'/students'}>
+          Students
         </NavLink>
         <NavLink className={classes.link} to={'/payment'}>
           Payment
         </NavLink>
-        <NavLink className={classes.link} to={'/classes'}>
+        {/* <NavLink className={classes.link} to={'/classes'}>
           Classes
-        </NavLink>
+        </NavLink> */}
         <NavLink className={classes.link} to={'/chats'}>
           Chats
         </NavLink>
@@ -45,7 +43,7 @@ const Sidebar = (props) => {
         <NavLink className={classes.link} to={'/support'}>
           Support
         </NavLink>
-        <br />
+        {/* <br />
         <h5>Generals</h5>
         <NavLink className={classes.link} to={'/'}>
           Roles
@@ -58,7 +56,7 @@ const Sidebar = (props) => {
         </NavLink>
         <NavLink className={classes.link} to={'/'}>
           Notifications
-        </NavLink>
+        </NavLink> */}
       </div>
 
     </div>

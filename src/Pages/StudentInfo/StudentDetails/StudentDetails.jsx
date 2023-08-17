@@ -1,42 +1,44 @@
 import React, { useState } from 'react'
 import PagePath from '../../../Components/PagePath/PagePath'
-import { useLocation } from 'react-router-dom';
-import StudentInfoLayout from '../../../UI/StudentInfoLayout/StudentInfoLayout';
-import StudentSchedule from '../../SD_Other_Pages/StudentSchedule/StudentSchedule';
-import StudentProfile from '../../SD_Other_Pages/StudentProfile/StudentProfile';
-import StudentClasses from '../../SD_Other_Pages/StudentClasses/StudentClasses';
-import StudentHomework from '../../SD_Other_Pages/StudentHomework/StudentHomework';
-import StudentReport from '../../SD_Other_Pages/StudentReport/StudentReport';
-import StudentResouces from '../../SD_Other_Pages/StudentResouces/StudentResouces';
+import classes from './CounselorDetails.module.css'
+import Academics from '../../CDOtherPages/Academics/Academics'
+import Testing from '../../CDOtherPages/Testing/Testing'
+import Activities from '../../CDOtherPages/Activities/Activities'
+import Major from '../../CDOtherPages/Major/major'
+import PersonalInfo from '../../CDOtherPages/PersonalInfo/PersonalInfo'
 
 const StudentDetails = () => {
 
-  const [ren, setRen] = useState(0)
+  const [num, setNum] = useState(0)
 
-  const renderElement = (number) => {
-    switch (number) {
+  function renderFunction(num){
+    switch (num) {
       case 0:
-        return <StudentProfile />
+        return <Academics />
       case 1:
-        return <StudentSchedule />
+        return <Testing />
       case 2:
-        return <StudentClasses />
+        return <Activities />
       case 3:
-        return <StudentReport />
+        return <Major />
       case 4:
-        return <StudentHomework />
-      case 5:
-        return <StudentResouces />
+        return <PersonalInfo />
     }
   }
+  
 
 
   return (
     <React.Fragment>
       <PagePath />
-      <StudentInfoLayout func={setRen} >
-        {renderElement(ren)}
-      </StudentInfoLayout>
+      <div className={classes.btn_container}>
+        <button onClick={()=>setNum(0)} className={num===0?classes.active:''}>Academics</button>
+        <button onClick={()=>setNum(1)} className={num===1?classes.active:''}>Testing</button>
+        <button onClick={()=>setNum(2)} className={num===2?classes.active:''}>Activities</button>
+        <button onClick={()=>setNum(3)} className={num===3?classes.active:''}>Major & Career</button>
+        <button onClick={()=>setNum(4)} className={num===4?classes.active:''}>Personal Info</button>
+      </div>
+      {renderFunction(num)}
     </React.Fragment>
   )
 }

@@ -1,0 +1,37 @@
+.container {
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: var(--br);
+    background: white;
+}
+
+.header {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    height: 45px;
+    position: relative;
+    padding: 0 15px;
+    background: #f1f1f1;
+}
+
+
+.header>img {
+    right: 18px;
+    position: absolute;
+    width: 19px;
+}
+
+.body {
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+}
+
+
+
+@media screen and (max-width:500px) {
+    .header>img {
+        display: none;
+    }
+}
