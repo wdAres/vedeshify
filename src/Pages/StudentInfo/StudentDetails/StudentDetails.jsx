@@ -4,7 +4,7 @@ import classes from './CounselorDetails.module.css'
 import Academics from '../../CDOtherPages/Academics/Academics'
 import Testing from '../../CDOtherPages/Testing/Testing'
 import Activities from '../../CDOtherPages/Activities/Activities'
-import Major from '../../CDOtherPages/Major/major'
+import Major from '../../CDOtherPages/Major/Major'
 import PersonalInfo from '../../CDOtherPages/PersonalInfo/PersonalInfo'
 
 const StudentDetails = () => {
