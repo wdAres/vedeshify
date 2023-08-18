@@ -13,6 +13,9 @@ import AdminLogin from './Pages/AdminLogin/AdminLogin'
 import Support from './Pages/Support/Support'
 import Inquiries from './Pages/Inquiries/Inquiries'
 import InquiryDetails from './Pages/Inquiries/InquiryDetails/InquiryDetails'
+import Profile from './Pages/Profile/Profile'
+import SupportDetails from './Pages/Support/SupportDetails/SupportDetails'
+import Community from './Pages/Community/Community'
 
 // import 'dotenv/config';
 
@@ -59,6 +62,9 @@ const App = () => {
               <Route path='chats'>
                 <Route index element={<Chats />} />
               </Route>
+              <Route path='community'>
+                <Route index element={<Community />} />
+              </Route>
               <Route path='reports'>
                 <Route index element={<Reports />} />
               </Route>
@@ -67,6 +73,10 @@ const App = () => {
               </Route>
               <Route path='support'>
                 <Route index element={<Support />} />
+                <Route path='/support/details/' element={<SupportDetails />} />
+              </Route>
+              <Route path='profile'>
+                <Route index element={<Profile />} />
               </Route>
               <Route path='inquiries'>
                 <Route index element={<Inquiries />} />

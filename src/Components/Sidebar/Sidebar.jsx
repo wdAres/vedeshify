@@ -22,12 +22,15 @@ const Sidebar = (props) => {
         <NavLink className={classes.link} to={'/students'}>
           Students
         </NavLink>
+        <NavLink className={classes.link} to={'/profile'}>
+          Profile
+        </NavLink>
         <NavLink className={classes.link} to={'/payment'}>
           Payment
         </NavLink>
-        {/* <NavLink className={classes.link} to={'/classes'}>
-          Classes
-        </NavLink> */}
+        <NavLink className={classes.link} to={'/community'}>
+          Community
+        </NavLink>
         <NavLink className={classes.link} to={'/chats'}>
           Chats
         </NavLink>

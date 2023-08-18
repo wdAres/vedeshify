@@ -1,0 +1,64 @@
+.container {
+    padding: 70px 20px 20px;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    justify-content: space-between;
+    padding-top: 30px;
+}
+
+.flex>div:has(input[type="text"]) {
+    width: 30%;
+}
+
+.past_project {}
+
+.heading {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #2A2A2A;
+}
+
+.flex2 {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    column-gap: 10px;
+}
+
+.wd{
+    width: 100%;
+}
+
+.box {
+    border-radius: var(--br);
+    border: 1px solid var(--border);
+    height: 40px;
+    padding-inline: 10px;
+    font-size: 14px;
+    color: #989898;
+    font-weight: 400;
+    width: 100%;
+    outline: none;
+    display: flex;
+    align-items: center;
+    width: max-content;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width:1000px){
+    .flex>div:has(input[type="text"]) {
+        width: 49%;
+    }
+}
+@media screen and (max-width:600px){
+    .flex>div:has(input[type="text"]) {
+        width: 100%;
+    }
+}

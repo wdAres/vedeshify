@@ -226,3 +226,37 @@
         bottom: -43px;
     }
 }
+
+
+@media screen and (max-width:600px){
+    .footer >button {
+        height: 50px;
+        width: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: black;
+        border-radius: var(--br);
+        border: none;
+        cursor: pointer;
+    }
+    .textarea >div {
+        width: max-content;
+        position: absolute;
+        top: 13px;
+        right: 10px;
+        display: none;
+    }
+    .textarea >input {
+        height: 50px;
+        width: 95%;
+        min-height: 50px;
+        border-radius: var(--br);
+        border: 1px solid var(--border);
+        padding: 13px 10px;
+        font-size: 15px;
+        font-weight: 400;
+        color: #333;
+        outline: none;
+    }
+}

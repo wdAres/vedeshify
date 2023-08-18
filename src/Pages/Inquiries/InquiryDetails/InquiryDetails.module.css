@@ -1,4 +1,4 @@
-.form{
+.form {
     padding: 20px;
     background: white;
     border-radius: var(--br);
@@ -8,20 +8,24 @@
     row-gap: 20px;
     column-gap: 20px;
 }
-.form  > div{
+
+.form>div {
     width: 32%;
 }
-.txtarea{
+
+.txtarea {
     width: 100% !important;
 }
-.txtarea > label{
+
+.txtarea>label {
     display: block;
     font-size: 14px;
     font-weight: 600;
     margin-bottom: 5px;
     color: #2A2A2A;
 }
-.txtarea > textarea{
+
+.txtarea>textarea {
     border-radius: var(--br);
     border: 1px solid var(--border);
     height: 40px;
@@ -36,14 +40,27 @@
     max-width: 100%;
 }
 
-.btn_con{    width: 100% !important;
+.btn_con {
+    width: 100% !important;
     display: flex;
     justify-content: end;
     column-gap: 10px;
     border-top: 1px solid var(--border);
-    padding-top: 20px;}
-.btn_con > button{    height: 40px;
+    padding-top: 20px;
+}
+
+.btn_con>button {
+    height: 40px;
     border-radius: var(--br);
     width: 116px;
     font-weight: 600;
-    border: none;}
+    border: none;
+}
+
+
+
+@media screen and (max-width:750px){
+    .form > div {
+        width: 100%;
+    }
+}

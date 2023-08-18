@@ -5,3 +5,12 @@
     background: none;
     border: none !important;
 }
+
+
+
+@media screen and (max-width:600px){
+    .fc-toolbar-title {
+        font-size: 17px !important;
+        margin: 0px;
+    }
+}

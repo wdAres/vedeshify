@@ -11,17 +11,19 @@
     margin: 10px 0 30px;
 }
 
-.txtarea{
+.txtarea {
     width: 100% !important;
 }
-.txtarea > label{
+
+.txtarea>label {
     display: block;
     font-size: 14px;
     font-weight: 600;
     margin-bottom: 5px;
     color: #2A2A2A;
 }
-.txtarea > textarea{
+
+.txtarea>textarea {
     border-radius: var(--br);
     border: 1px solid var(--border);
     height: 40px;
@@ -37,11 +39,11 @@
 }
 
 .body>div:nth-child(1),
-.body>div:nth-child(2){
+.body>div:nth-child(2) {
     width: 49%;
 }
 
-.body>div:nth-child(3){
+.body>div:nth-child(3) {
     width: 100%;
 }
 
@@ -74,4 +76,10 @@
     .popup {
         width: 90%;
     }
+
+    .body>div:nth-child(1),
+    .body>div:nth-child(2) {
+        width: 100%;
+    }
+
 }

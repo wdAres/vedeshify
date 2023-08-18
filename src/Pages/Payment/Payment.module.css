@@ -50,10 +50,19 @@
   }
 }
 
+
 .con {
 
   padding: 20px;
   display: flex;
   flex-direction: column;
   row-gap: 20px;
+}
+
+
+@media screen and (max-width:600px){
+  .flex {
+    flex-direction: column;
+    row-gap: 10px;
+}
 }

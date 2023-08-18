@@ -2,6 +2,7 @@ import React, { useRef, useState } from 'react'
 import cd from '../../assets/cd.png'
 import Container from '../../UI/Container/Container';
 import classes from './Foldable.module.css'
+import { useEffect } from 'react';
 
 
 const Foldable = (props) => {
@@ -13,6 +14,13 @@ const Foldable = (props) => {
     const toggleCollapsible = () => {
         setIsOpen(!isOpen);
     };
+
+    useEffect(() => {
+        setTimeout(() => {
+            props.open === true ? setIsOpen(true) : ''
+        }, 200)
+      }, [])
+    
 
     return (
         <div className={`${classes.container} ${props.cls}`} style={{

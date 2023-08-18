@@ -26,10 +26,11 @@ const CalendarModal = (props) => {
                     <span>+4 More</span>
                 </div>
             </div>
-            <div className={classes.bottom}>
+            <br />
+            {/* <div className={classes.bottom}>
                 <button>Reschedule</button>
                 <BlackButton>Start Meeting Now</BlackButton>
-            </div>
+            </div> */}
         </Modal>
     )
 }

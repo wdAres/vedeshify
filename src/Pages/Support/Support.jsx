@@ -73,7 +73,7 @@ const td2 = [
 
 
 const Support = () => {
-    const [popup,setPop] = useState(false)
+    const [popup, setPop] = useState(false)
     const [viewSidebar, setSidebar] = useState(false)
 
     return (
@@ -87,14 +87,14 @@ const Support = () => {
             <div className={classes.flex}>
                 <Heading cls={classes.heading} heading={'Support & Ticket'} p={'You can see your Supports here and manage them'} />
                 <div className={classes.flex}>
-                <SearchBar cls={classes.sb} />
-                <Heading  btnFunction={setPop} btnValue={popup} cls={classes.heading}  btn={'Add Ticket'} />
+                    <SearchBar cls={classes.sb} />
+                    <Heading btnFunction={setPop} btnValue={popup} cls={classes.heading} btn={'Add Ticket'} />
                 </div>
             </div>
-            <MainTable detFunc={setSidebar} data={t_data} headings={t_headings} keys={t_key} />
+            <MainTable det={true} data={t_data} headings={t_headings} keys={t_key} />
 
 
-<SupportModal isPopup={popup} popupFunc={setPop} />
+            <SupportModal isPopup={popup} popupFunc={setPop} />
 
 
         </Fragment>
