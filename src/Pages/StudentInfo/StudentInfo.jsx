@@ -7,6 +7,7 @@ import Tile from '../../Components/Tile/Tile'
 import FilterButton from '../../Components/FilterButton/FilterButton'
 import MainTable from '../../Components/MainTable/MainTable'
 import Container from '../../UI/Container/Container'
+import Pagination from '../../Components/Pagination/Pagination'
 
 // Tile Data 1
 const td1 = [
@@ -68,6 +69,7 @@ const StudentInfo = () => {
           <Tile data={td2} direction={'row'} />
         </div>
         <MainTable det={true} headings={table_headings} keys={table_keys} data={table_data} />
+        <Pagination total={10} limit={1} selectPage={()=>{}} />
       </Container>
     </React.Fragment>
   )

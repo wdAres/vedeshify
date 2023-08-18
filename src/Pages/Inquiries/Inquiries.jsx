@@ -6,6 +6,7 @@ import classes from './Inquiries.module.css'
 import Tile from '../../Components/Tile/Tile'
 import MainTable from '../../Components/MainTable/MainTable'
 import SearchBar from '../../Components/SearchBar/SearchBar'
+import Pagination from '../../Components/Pagination/Pagination'
 
 const data = [
     {
@@ -88,6 +89,7 @@ const Inquiries = () => {
                 <SearchBar cls={classes.sb} />
             </div>
             <MainTable det={true} data={t_data} headings={t_headings} keys={t_key} />
+            <Pagination total={10} limit={1} selectPage={()=>{}} />
         </Fragment>
     )
 }

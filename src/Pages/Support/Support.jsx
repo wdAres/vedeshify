@@ -7,6 +7,7 @@ import Tile from '../../Components/Tile/Tile'
 import MainTable from '../../Components/MainTable/MainTable'
 import SearchBar from '../../Components/SearchBar/SearchBar'
 import SupportModal from '../../Components/AllModals/SupportModal/SupportModal'
+import Pagination from '../../Components/Pagination/Pagination'
 
 const data = [
     {
@@ -92,7 +93,7 @@ const Support = () => {
                 </div>
             </div>
             <MainTable det={true} data={t_data} headings={t_headings} keys={t_key} />
-
+            <Pagination total={10} limit={1} selectPage={()=>{}} />
 
             <SupportModal isPopup={popup} popupFunc={setPop} />
 

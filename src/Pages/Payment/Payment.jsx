@@ -11,6 +11,7 @@ import PaymentChart from '../../Components/PaymentChart/PaymentChart'
 import PaymentSidebar from '../../Components/SidebarModals/PaymentSidebar'
 import FilterButton from '../../Components/FilterButton/FilterButton'
 import SearchBar from '../../Components/SearchBar/SearchBar'
+import Pagination from '../../Components/Pagination/Pagination'
 
 const data = [
   {
@@ -99,6 +100,7 @@ const Payment = () => {
         <SearchBar cls={classes.sb} />
         </div>
         <MainTable detFunc={setSidebar} data={t_data} headings={t_headings} keys={t_key} />
+        <Pagination total={10} limit={1} selectPage={()=>{}} />
       </Container>
 
 
