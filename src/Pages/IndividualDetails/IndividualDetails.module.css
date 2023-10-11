@@ -1,0 +1,90 @@
+.section {
+    padding: 30px;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    text-align: center;
+    align-items: center;
+}
+
+.container {
+    padding: 20px;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    justify-content: space-between;
+    padding-top: 30px;
+}
+
+.flex>div:has(input[type="text"]) {
+    width: 30%;
+}
+
+.heading {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #2A2A2A;
+}
+
+.flex2 {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    column-gap: 10px;
+}
+
+.wd {
+    width: 100%;
+}
+
+
+
+@media screen and (max-width:1000px) {
+    .flex>div:has(input[type="text"]) {
+        width: 49%;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .flex>div:has(input[type="text"]) {
+        width: 100%;
+    }
+}
+
+.heading2 {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.end {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    column-gap: 10px;
+}
+
+.cancel_btn {
+    height: 40px;
+    display: flex;
+    width: 150px;
+    justify-content: center;
+    align-items: center;
+    background: #efefef;
+    border-radius: var(--br);
+    font-weight: 600;
+}
+
+.bb {
+    width: 150px;
+    height: 40px;
+}

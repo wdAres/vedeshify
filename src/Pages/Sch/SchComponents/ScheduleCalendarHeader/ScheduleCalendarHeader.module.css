@@ -1,0 +1,56 @@
+.select_date_container {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.select_date_container button {
+    background-color: black;
+    border-radius: var(--br);
+    border: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 30px;
+}
+
+.select_date_container span {
+    min-width: 330px;
+    text-align: center;
+    font-weight: 500;
+}
+
+@media screen and (max-width:600px) {
+    .select_date_container {
+        width: 100%;
+        flex-direction: unset;
+        row-gap: 10px;
+        flex-wrap: wrap;
+        column-gap: 1%;
+    }
+
+    .select_date_container button {
+        width: 49%;
+    }
+
+    .select_date_container button:nth-child(1) {
+        order: 0;
+    }
+
+    .select_date_container button:nth-child(2) {
+        order: 1;
+        width: 100%;
+    }
+
+    .select_date_container span {
+        order: 2;
+        min-width: 100%;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    
+
+}

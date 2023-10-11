@@ -46,6 +46,12 @@ const Sidebar = (props) => {
         <NavLink className={classes.link} to={'/support'}>
           Support
         </NavLink>
+        <NavLink className={classes.link} to={'/booking'}>
+          Booking
+        </NavLink>
+        <NavLink className={classes.link} to={'/services'}>
+          Services
+        </NavLink>
         {/* <br />
         <h5>Generals</h5>
         <NavLink className={classes.link} to={'/'}>

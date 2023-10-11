@@ -1,0 +1,39 @@
+
+.fold  >div:nth-child(1){
+    background-color: white;
+    border: var(--border);
+}
+
+.fold h6{
+    font-weight: 400;
+}
+/*  d-flex align-items-center justify-content-between w-100 */
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* d-flex column-gap-2 align-items-center */
+.inner{
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+}
+
+.body_btn{
+    border:1px solid var(--border);
+    border-radius: var(--br);
+    height: 40px;
+    width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+}
+
+
+.inner h6{
+    font-size: 14px;
+}

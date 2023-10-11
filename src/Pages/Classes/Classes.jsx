@@ -78,6 +78,7 @@ const Classes = () => {
       <AddClassModal isPopup={popup} popupFunc={setPop} />
 
       <PagePath />
+
       <Heading btnFunction={setPop} btnValue={popup} heading={'Classes'} p={'You can see your Payments here and manage them'} btn={'Add Class'} />
       <div className={classes.btn_container}>
         <button onClick={() => setNum(0)} className={`${num === 0 ? classes.active : ''}`}>Upcoming Classes</button>

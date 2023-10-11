@@ -1,0 +1,10 @@
+.container{
+
+    background: white;
+}
+.header {
+    padding: 10px;
+    font-weight: 400;
+    border-bottom: 1px solid #d1d1d1;
+}
+.body{}

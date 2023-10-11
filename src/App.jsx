@@ -16,6 +16,17 @@ import InquiryDetails from './Pages/Inquiries/InquiryDetails/InquiryDetails'
 import Profile from './Pages/Profile/Profile'
 import SupportDetails from './Pages/Support/SupportDetails/SupportDetails'
 import Community from './Pages/Community/Community'
+import Booking from './Pages/Booking/Booking'
+import UpcomingBookingDetails from './Pages/BookingDetails/UpcomingBookingDetails'
+import PastBookingDetails from './Pages/BookingDetails/PastBookingDetails'
+import Login from './Pages/Auth/Login'
+import Signup from './Pages/Auth/Signup'
+import ForgetPassword from './Pages/Auth/ForgetPassword'
+import Services from './Pages/Services/Services'
+import EditService from './Pages/Services/ServiceDetails/EditService'
+import AddService from './Pages/Services/ServiceDetails/AddService'
+import Sch from './Pages/Sch/Sch'
+import IndividualDetails from './Pages/IndividualDetails/IndividualDetails'
 
 // import 'dotenv/config';
 
@@ -37,10 +48,13 @@ const App = () => {
   return (
     <>
 
-      {path === '/' ?
+      {path.includes('auth') || path === '/' ?
 
         <Routes>
-          <Route path='/' element={<AdminLogin />} />
+          <Route path='/' element={<Login />} />
+          <Route path='/auth-signup' element={<Signup />} />
+          <Route path='/auth-forget' element={<ForgetPassword />} />
+          <Route path='/auth-individual' element={<IndividualDetails />} />
         </Routes>
 
         :
@@ -82,6 +96,20 @@ const App = () => {
                 <Route index element={<Inquiries />} />
                 <Route path='/inquiries/details/' element={<InquiryDetails />} />
               </Route>
+              <Route path='services'>
+                <Route index element={<Services />} />
+                <Route path='/services/edit/'  element={<EditService />} />
+                <Route path='/services/add/'  element={<AddService />} />
+              </Route>
+              <Route path='booking'>
+                <Route index element={<Booking />} />
+                <Route  path='/booking/upcoming-details/' element={<UpcomingBookingDetails />} />
+                <Route  path='/booking/past-details/' element={<PastBookingDetails />} />
+              </Route>
+              <Route path='sch'>
+                <Route index element={<Sch />} />
+              </Route>
+             
             </Routes>
           </main>
         </Layout>

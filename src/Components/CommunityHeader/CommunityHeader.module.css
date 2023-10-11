@@ -1,0 +1,41 @@
+.header {
+    padding: 20px;
+    background: white;
+}
+
+.header_top{
+    display: flex;
+    column-gap: 10px;
+    margin-bottom: 20px;
+}
+
+.header_top img {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--br);
+}
+
+.header_top input {
+    border-radius: var(--br);
+    border: var(--border);
+    padding-left: 10px;
+    font-size: 12px;
+    width: 100%;
+    color: #000000;
+    background: #fafafa;
+    font-weight: 400;
+    outline: none;
+}
+
+.header_bottom {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 10px;
+}
+
+.header_bottom span {
+    font-size: 13px;
+    font-weight: 500;
+}

@@ -1,0 +1,105 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+  grid-template-rows: 200px;
+  margin-bottom: 20px;
+}
+
+.grid>div:nth-child(1) {
+  grid-column: 1 / span 2;
+}
+
+.grid>div:nth-child(2) {
+  grid-column: span 4;
+}
+
+
+.btns_con {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.btn {
+  width: 150px;
+  height: 40px;
+  font-size: 13px;
+  background: white;
+}
+
+.btn_container {
+  border-radius: var(--br);
+  overflow: hidden;
+}
+
+.btn_container>button {
+  height: 40px;
+  border: none;
+  padding-inline: 20px;
+  font-weight: 400;
+  font-size: 13px;
+  width: 150px;
+}
+
+.btn_container>button.active_btn {
+  background: black;
+  color: white;
+
+
+}
+
+.choose_date {
+  border: var(--border);
+  border-radius: var(--br);
+  height: 40px;
+  width: max-content;
+  padding-inline: 20px;
+  font-size: 13px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 10px;
+}
+
+.choose_date>svg {
+  margin-top: -3px;
+}
+
+@media screen and (max-width:1000px) {
+  .btns_con {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    row-gap: 20px;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .btn_container>button,
+  .btn_container {
+    width: 100%;
+  }
+
+}
+
+@media screen and (max-width:900px) {
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .grid>div {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width:600px) {
+  .flex {
+    flex-direction: column;
+    row-gap: 10px;
+  }
+}

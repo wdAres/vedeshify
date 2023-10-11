@@ -1,0 +1,110 @@
+.card {
+    padding: 20px;
+    flex-direction: column;
+    display: flex;
+    row-gap: 14px;
+    position: relative;
+}
+
+.hr_tag {
+    position: absolute;
+    right: 21px;
+    top: 19px;
+    width: 50px;
+    text-align: center;
+    font-size: 13px;
+    height: 25px;
+    background: whitesmoke;
+    border-radius: var(--br);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card a {
+    color: #393838;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 13px;
+}
+
+.h6_a {
+    font-size: 15px !important;
+}
+
+.card p {
+    color: #7D7D7D;
+    font-size: 14px;
+}
+
+
+/* d-flex aling-items-center flex-wrap */
+.card_tags {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px 15px;
+}
+
+.w100 {
+    width: 100%;
+    display: flex;
+}
+
+.card_tags span {
+    font-size: 13px;
+    font-weight: 300;
+    color: #8b8989;
+    text-decoration-color: #8b8989 !important;
+}
+
+/* `text-decoration-underline` */
+.bold_span {
+    text-decoration: underline;
+}
+
+.btn {
+    border: none;
+    width: max-content;
+    padding: 10px 10px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: var(--br);
+}
+
+.cancel {
+    color: #C50000;
+    background: #FFDFDF;
+}
+
+.accept {
+    color: #04B90B;
+    background: #D5FFD7;
+}
+
+.reschedule {
+    color: #B76E03;
+    background: #FFE3B9;
+}
+
+.df{
+    display: flex;
+    align-items: center;
+    justify-content: space-between ;
+
+}
+
+.btns_c{
+    /* 'd-flex column-gap-2 flex-wrap row-gap-2' */
+    display: flex;
+    column-gap: 10px;
+    flex-wrap: wrap;
+    row-gap: 10px;
+}
+
+@media screen and (max-width:1000px){
+    .df{
+        flex-direction: column;
+        row-gap: 10px;
+    }
+}

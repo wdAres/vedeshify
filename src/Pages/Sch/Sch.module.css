@@ -1,0 +1,145 @@
+.section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 20px;
+    margin: auto;
+}
+
+.overall_con {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+
+.calendar_container {
+    border: 1px solid var(--border);
+    border-radius: var(--br);
+    width: 100%;
+    overflow: hidden;
+}
+
+.weekdays {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: 50px;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.weekdays>div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border);
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+}
+
+.weekdays>div:last-child {
+    border-right: none;
+    /* border-left: none; */
+}
+
+.grid_row {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: 100px;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.grid_row>div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border);
+    border-bottom: none;
+    border-left: none;
+}
+
+.grid_row>div:nth-child(1) {
+    border-top: none;
+}
+
+.grid_row>div:last-child {
+    border-right: none;
+}
+
+.bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+    font-size: 13px;
+    margin-left: auto;
+    /* column-gap: 5px; */
+}
+
+.bottom>button {
+    border-radius: var(--br);
+    border: none;
+    height: 40px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.bottom>button:nth-child(1) {
+    width: 40%;
+    background: #f1f3f4;
+}
+
+.bottom>button:nth-child(2) {
+    width: 58%;
+}
+
+
+.reverse {
+    margin-bottom: 20px;
+}
+
+.reverse div {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    align-items: center;
+    text-align: center;
+}
+
+.reverse p {
+    margin-bottom: 0;
+}
+
+
+@media screen and (max-width:1000px) {
+    .section {
+        width: 100%;
+        padding: 30px;
+    }
+
+    .calendar_container {
+        width: 1000px;
+    }
+
+    .overall_con {
+        width: 100%;
+        overflow: scroll;
+    }
+
+    .bottom {
+        width: 100%;
+    }
+
+    .select_date_container {
+        width: 100%;
+        flex-direction: column;
+        row-gap: 10px;
+    }
+}

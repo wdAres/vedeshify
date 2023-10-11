@@ -1,0 +1,29 @@
+.bottom{
+    /* d-flex align-items-center justify-content-between */
+    display: flex;
+    align-items: center;
+    justify-content: space-between ;
+}
+.bottom button{
+    border: none;
+    background: none;
+    font-size: 14px;
+}
+
+.container{
+    padding: 20px;
+    background: white;
+}
+
+.btns{
+    /* d-flex column-gap-4 align-items-center */
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+}
+
+.bottom button{
+    /* border-none outline-none */
+    border: none;
+    outline: none;
+}

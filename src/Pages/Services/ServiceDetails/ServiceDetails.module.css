@@ -1,0 +1,59 @@
+.heading {
+    margin-bottom: 0;
+}
+
+.cancel_btn {height: 40px;
+    display: flex;
+    width: 150px;
+    justify-content: center;
+    align-items: center;
+    background: #efefef;
+    border-radius: var(--br);
+    font-weight: 600;}
+
+.bb {
+    width: 150px;
+    height: 40px;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    display: flex;
+    row-gap: 30px;
+    flex-direction: column;
+    background: white;
+    border-radius: var(--br);
+    padding: 30px;
+}
+
+.flex>div {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 1%;
+    row-gap: 10px;
+}
+
+.end {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    column-gap: 10px;
+}
+
+h4.heading {
+    width: 100%;
+    margin-bottom: 5px;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.flex div>div:has(input) {
+    width: 49%;
+}
+
+.flex input {
+    width: 100%;
+}

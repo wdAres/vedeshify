@@ -9,7 +9,7 @@ const Heading = (props) => {
                 <h3>{props.heading}</h3>
                 <p>{props.p}</p>
             </div>
-            {props.btn && <BlackButton func={props.btnFunction?props.btnFunction : '' } funcVal={props.btnValue} cls={classes.button}>{props.btn}</BlackButton>}
+            {props.btn && <BlackButton func2={props.btnFunction2?props.btnFunction2 : '' } func={props.btnFunction?props.btnFunction : '' } funcVal={props.btnValue} cls={classes.button}>{props.btn}</BlackButton>}
         </div>
     )
 }

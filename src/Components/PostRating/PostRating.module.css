@@ -1,0 +1,23 @@
+.rating{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+
+}
+.rating h3{
+    font-size: 16px;
+    font-weight: 500;
+
+}
+.rating p{
+    color: #989898;
+    font-size: 13px;
+}
+.rating .star_con{
+    display: flex;
+    column-gap: 10px;
+    flex-wrap: wrap;
+}
+.rating .star_con img{
+    width: 20px;
+}

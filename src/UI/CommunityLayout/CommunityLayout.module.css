@@ -1,0 +1,49 @@
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container>div:nth-child(1),
+.container>div:nth-child(3) {
+    width: 25%;
+    position: sticky;
+    top: 81px;
+    z-index: 1;
+    left: 0;
+    height: max-content;
+}
+
+.container>div:nth-child(2) {
+    width: 47%;
+}
+
+.container>div:nth-child(3) {}
+
+
+@media screen and (max-width:1000px) {
+    .container {
+        width: max-content;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        transition: left 0.2s ease;
+    }
+
+   
+
+    .container>div:nth-child(1),
+    .container>div:nth-child(2),
+    .container>div:nth-child(3) {
+        /* display: none !important; */
+        position: unset;
+        /* padding: 30px; */
+        width: 90vw;
+    }
+
+    .show1,
+    .show3{
+        height: 100vh;
+    }
+
+}

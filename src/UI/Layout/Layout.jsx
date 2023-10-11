@@ -3,6 +3,7 @@ import classes from './Layout.module.css'
 
 import Navbar from '../../Components/Navbar/Navbar'
 import Sidebar from '../../Components/Sidebar/Sidebar'
+import { useLocation } from 'react-router-dom'
 
 
 const Layout = (props) => {
@@ -13,8 +14,10 @@ const Layout = (props) => {
         sidebar===true?setSidebar(false):setSidebar(true)
     }
 
+    const location = useLocation();
 
   return (
+    
     <div className={classes.layout}>
         <div className={`${classes.left} ${sidebar===true? classes.sidebar_true:''}`}>
             <Sidebar onSideberBtn={sidebarToggleHandler} />

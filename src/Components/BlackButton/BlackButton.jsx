@@ -5,8 +5,13 @@ const BlackButton = (props) => {
 
   const run = () => {
     if (props.func) {
-      console.log('hello');
+      // console.log('hello');
        props.func(!props.funcVal)
+    }
+
+    // Calling regular function
+    else if (props.func2){
+      props.func2()
     }
     
   }

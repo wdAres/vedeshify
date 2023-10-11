@@ -30,10 +30,10 @@ const Foldable = (props) => {
         }}>
             <div onClick={toggleCollapsible} className={classes.header}>
                 {props.children[0]}
-                <img style={{
+                {!props.no_img && <img style={{
                     transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)',
                     transition: ' 0.1s ease-out',
-                }} src={cd} alt="" />
+                }} src={cd} alt="" />}
             </div>
 
             <div className={classes.body} ref={contentRef}
