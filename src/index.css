@@ -17,14 +17,14 @@
 /* Sidebar Active */
 .active{
   /* background-color: var(--tm); */
-  /* background-color: black; */
-  background-color:#092645;
+  background-color: black;
+  /* background-color:#092645; */
   color: white;
 }
 
 
 .active path{
-  stroke: white;
+  stroke: gold;
 }
 
 .main_container{

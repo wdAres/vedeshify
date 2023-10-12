@@ -53,7 +53,7 @@
 }
 .link:hover{
   /* background-color: black; */
-  background-color: #092645;
+  background-color: black;
   color: white;
 }
 
@@ -95,6 +95,6 @@
 
 .link:hover .svg path{
   stroke-width: 1.2px;
-  stroke: white;
+  stroke: gold;
 }
 
