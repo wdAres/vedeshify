@@ -49,9 +49,11 @@
   padding: 0 20px;
   border-radius: var(--br);
   margin-bottom: 5px;
+  column-gap: 10px;
 }
 .link:hover{
-  background-color: black;
+  /* background-color: black; */
+  background-color: #092645;
   color: white;
 }
 
@@ -76,3 +78,23 @@
     height: max-content;
 }
 }
+
+.svg svg{
+  width: 16px;
+}
+
+.svg > div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.svg path{
+  stroke-width: 1.2px;
+  stroke: black;
+}
+
+.link:hover .svg path{
+  stroke-width: 1.2px;
+  stroke: white;
+}
+

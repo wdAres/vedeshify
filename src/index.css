@@ -17,10 +17,15 @@
 /* Sidebar Active */
 .active{
   /* background-color: var(--tm); */
-  background-color: black;
+  /* background-color: black; */
+  background-color:#092645;
   color: white;
 }
 
+
+.active path{
+  stroke: white;
+}
 
 .main_container{
   padding: 20px;
