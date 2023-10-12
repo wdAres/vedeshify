@@ -9,7 +9,7 @@ import PersonalInfo from '../../CDOtherPages/PersonalInfo/PersonalInfo'
 
 const StudentDetails = () => {
 
-  const [num, setNum] = useState(0)
+  const [num, setNum] = useState(4)
 
   function renderFunction(num){
     switch (num) {
@@ -32,11 +32,11 @@ const StudentDetails = () => {
     <React.Fragment>
       <PagePath />
       <div className={classes.btn_container}>
+        <button onClick={()=>setNum(4)} className={num===4?classes.active:''}>Personal Info</button>
         <button onClick={()=>setNum(0)} className={num===0?classes.active:''}>Academics</button>
         <button onClick={()=>setNum(1)} className={num===1?classes.active:''}>Testing</button>
         <button onClick={()=>setNum(2)} className={num===2?classes.active:''}>Activities</button>
         <button onClick={()=>setNum(3)} className={num===3?classes.active:''}>Major & Career</button>
-        <button onClick={()=>setNum(4)} className={num===4?classes.active:''}>Personal Info</button>
       </div>
       {renderFunction(num)}
     </React.Fragment>

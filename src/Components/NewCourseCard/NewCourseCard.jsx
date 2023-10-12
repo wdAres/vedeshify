@@ -29,7 +29,7 @@ const NewCourseCard = (props) => {
       </div>
       <div className={`${classes.bottom_con}`}>
         <div className={`${classes.box1}`}>
-          <Link to={'edit'} className={`text-capitalize`}>Edit</Link>
+          <Link to={'edit'} className={`text-capitalize`}>View & Edit</Link>
           <Link to={''} className={`text-capitalize`}>Delete</Link>
         </div>
       </div>

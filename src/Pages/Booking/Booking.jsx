@@ -5,7 +5,9 @@ import { SlCalender } from 'react-icons/sl'
 import PagePath from '../../Components/PagePath/PagePath'
 import Tile from '../../Components/Tile/Tile'
 import Heading from '../../Components/Heading/Heading'
-
+import { useNavigate } from 'react-router-dom'
+import Datetime from 'react-datetime';
+import "react-datetime/css/react-datetime.css";
 
 // Tile Data 1
 const td1 = [
@@ -35,6 +37,7 @@ const td2 = [
 
 const Booking = () => {
 
+    const [startDate, setStartDate] = useState(new Date());
     const [num, setNum] = useState(1)
 
     const renderTab = (num) => {
@@ -48,6 +51,18 @@ const Booking = () => {
         }
     }
 
+    const navigate = useNavigate()
+    const changePage = () => {
+        navigate('/sch')
+    }
+
+    const [calendarVisible, setCalendarVisible] = useState(false);
+
+    const handleButtonClick = () => {
+        setCalendarVisible(!calendarVisible);
+    };
+
+
 
     return (
         <React.Fragment>
@@ -59,7 +74,7 @@ const Booking = () => {
                 <Tile data={td2} direction={'row'} />
             </div>
 
-            <Heading heading={'Booking'} p={'You can see your Bookings here and manage them'} />
+            <Heading heading={'Booking'} p={'You can see your Bookings here and manage them'} btn={'Add Availability'} btnFunction2={changePage} />
 
             <div className={` ${classes.btns_con}`}>
                 <div className={classes.btn_container}>
@@ -67,7 +82,16 @@ const Booking = () => {
                     <button onClick={() => setNum(2)} className={`${num === 2 ? classes.active_btn : ''}`}>Past</button>
                     <button onClick={() => setNum(3)} className={`${num === 3 ? classes.active_btn : ''}`}>Reschedule</button>
                 </div>
-                <button className={classes.choose_date}><SlCalender />Choose Date</button>
+
+                <div className={classes.cal_con}>
+
+                    <button className={classes.choose_date} onClick={handleButtonClick}><SlCalender />
+                        Choose Date
+
+                    </button>
+                    {calendarVisible && <Datetime className={classes.cal} input={false} open={true} />}
+                </div>
+
             </div>
 
             {

@@ -8,6 +8,7 @@ import MainTable from '../../Components/MainTable/MainTable'
 import SearchBar from '../../Components/SearchBar/SearchBar'
 import SupportModal from '../../Components/AllModals/SupportModal/SupportModal'
 import Pagination from '../../Components/Pagination/Pagination'
+import { useNavigate } from 'react-router-dom'
 
 const data = [
     {
@@ -77,6 +78,8 @@ const Support = () => {
     const [popup, setPop] = useState(false)
     const [viewSidebar, setSidebar] = useState(false)
 
+
+    
     return (
         <Fragment>
             <PagePath />
@@ -86,7 +89,7 @@ const Support = () => {
                 <Tile data={td2} direction={'row'} />
             </div>
             <div className={classes.flex}>
-                <Heading cls={classes.heading} heading={'Support & Ticket'} p={'You can see your Supports here and manage them'} />
+                <Heading cls={classes.heading} heading={'Support & Ticket'} p={'You can see your Supports here and manage them'}  />
                 <div className={classes.flex}>
                     <SearchBar cls={classes.sb} />
                     <Heading btnFunction={setPop} btnValue={popup} cls={classes.heading} btn={'Add Ticket'} />

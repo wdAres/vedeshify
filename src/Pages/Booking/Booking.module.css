@@ -50,23 +50,7 @@
 
 }
 
-.choose_date {
-  border: var(--border);
-  border-radius: var(--br);
-  height: 40px;
-  width: max-content;
-  padding-inline: 20px;
-  font-size: 13px;
-  background-color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  column-gap: 10px;
-}
 
-.choose_date>svg {
-  margin-top: -3px;
-}
 
 @media screen and (max-width:1000px) {
   .btns_con {
@@ -102,4 +86,36 @@
     flex-direction: column;
     row-gap: 10px;
   }
+}
+
+
+.choose_date {
+  border: var(--border);
+  border-radius: var(--br);
+  height: 40px;
+  width: max-content;
+  padding-inline: 20px;
+  font-size: 13px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 10px;
+  position: relative;
+}
+
+.choose_date>svg {
+  margin-top: -3px;
+}
+
+
+.cal{
+  display: flex;
+  position: absolute !important;
+  top: 41px;
+  right: 0;
+}
+
+.cal_con{
+  position: relative;
 }
