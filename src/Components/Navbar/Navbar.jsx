@@ -7,6 +7,7 @@ import calender from '../../assets/cal.png'
 import alert from '../../assets/alert.png'
 import dp from '../../assets/dp.png'
 import cd from '../../assets/cd.png'
+import { Link } from 'react-router-dom'
 
 const Navbar = (props) => {
 
@@ -21,22 +22,22 @@ const Navbar = (props) => {
         <input placeholder='Search...' type="text" />
       </div>
       <div className={classes.nav_body}>
-        <div className={classes.nav_btn}>
+        {/* <div className={classes.nav_btn}>
           <img src={alert} alt="" />
-        </div>
-        <div className={classes.nav_btn}>
+        </div> */}
+        <Link to={'/support'} className={classes.nav_btn}>
           <img src={setting} alt="" />
-        </div>
-        <div className={classes.nav_btn}>
+        </Link>
+        <Link to={'/booking'} className={classes.nav_btn}>
           <img src={calender} alt="" />
-        </div>
-        <div className={classes.nav_profile}>
+        </Link>
+        <Link to={'/profile'} className={classes.nav_profile}>
           <div>
             <img src={dp} alt="" />
             <p>Puneet Shrivastav</p>
-            <img src={cd} alt="" />
+            {/* <img src={cd} alt="" /> */}
           </div>
-        </div>
+        </Link>
         <button onClick={sidebarHandler} className={classes.sidebar_open_btn}>
           <div></div>
           <div></div>

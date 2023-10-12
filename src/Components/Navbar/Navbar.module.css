@@ -56,6 +56,10 @@
   width: 20px;
 }
 
+.nav_profile{
+  text-decoration: none;
+}
+
 .nav_profile>div:nth-child(1) {
   display: flex;
   align-items: center;
@@ -71,6 +75,7 @@
 .nav_profile>div:nth-child(1)>p {
   font-weight: 400;
   margin-right: 7px;
+  text-decoration: none;
 }
 
 .sidebar_open_btn {

@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 import { RxCross2 } from 'react-icons/rx'
 // import dp
 import img from '../../assets/dp.png'
-import logo from '../../assets/logo.png'
+import logo from '../../assets/logo_new.png'
 import i1 from "../../assets/Icons/dash_icon.svg";
 import i2 from "../../assets/Icons/schedule_icon.svg";
 import i3 from "../../assets/Icons/plan_biiling_icon.svg";
