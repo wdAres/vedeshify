@@ -47,7 +47,8 @@
 
 .sb_container {
     overflow: scroll;
-    height: 285px;
+    /* height: 285px; */
+    height: 180px;
     margin-top: 10px;
     scrollbar-width: none;
 }

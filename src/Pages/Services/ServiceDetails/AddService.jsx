@@ -6,6 +6,7 @@ import classes from './ServiceDetails.module.css'
 import LabelledInput from '../../../Components/LabelledInput/LabelledInput'
 import LabelledTextarea from '../../../Components/LabelledTextarea/LabelledTextarea'
 import { useNavigate } from 'react-router-dom'
+import FileLabel from '../../../Components/FileLabel/FileLabel'
 
 const AddService = () => {
 
@@ -27,6 +28,10 @@ const AddService = () => {
                 </div>
                 
 
+                <div>
+                   <h4 className={classes.heading}>Upload Image</h4>
+                   <FileLabel />
+                </div>
                 <div>
                    <h4 className={classes.heading}>What will you take away from this Services ?</h4>
                    <LabelledInput ph={'Videshify'} />

@@ -5,6 +5,7 @@ import BlackButton from '../../../Components/BlackButton/BlackButton'
 import classes from './ServiceDetails.module.css'
 import LabelledInput from '../../../Components/LabelledInput/LabelledInput'
 import LabelledTextarea from '../../../Components/LabelledTextarea/LabelledTextarea'
+import FileLabel from '../../../Components/FileLabel/FileLabel'
 
 const EditService = () => {
     return (
@@ -21,6 +22,13 @@ const EditService = () => {
                     <h4 className={classes.heading}>About the service</h4>
                     <LabelledTextarea ph={'Service Name'} />
                 </div>
+
+                <div>
+                   <h4 className={classes.heading}>Upload Image</h4>
+                   <FileLabel />
+                </div>
+
+                
                 
 
                 <div>
@@ -30,6 +38,8 @@ const EditService = () => {
                    <LabelledInput ph={'Videshify'} />
                    <LabelledInput ph={'Videshify'} />
                 </div>
+
+                
 
                 <div>
                    <h4 className={classes.heading}>Pricing</h4>

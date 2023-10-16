@@ -62,14 +62,18 @@
 .textarea {
     width: 90%;
     position: relative;
+    border-radius: var(--br);
+    border: 1px solid var(--border);
 }
+
 
 .textarea>input {
     height: 50px;
     width: 84%;
     min-height: 50px;
-    border-radius: var(--br);
-    border: 1px solid var(--border);
+    /* border-radius: var(--br);
+    border: 1px solid var(--border); */
+    border: none;
     padding: 13px 10px;
     font-size: 15px;
     font-weight: 400;

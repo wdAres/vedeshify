@@ -12,12 +12,12 @@
 .header_top img {
     width: 40px;
     height: 40px;
-    border-radius: var(--br);
+    border-radius: 50%;
 }
 
 .header_top input {
-    border-radius: var(--br);
-    border: var(--border);
+    border-radius: 20px;
+    border: 1px solid var(--border);
     padding-left: 10px;
     font-size: 12px;
     width: 100%;
@@ -33,9 +33,21 @@
     flex-wrap: wrap;
     column-gap: 20px;
     row-gap: 10px;
+    border-top: 1px solid var(--border);
+    padding-top: 20px;
 }
 
 .header_bottom span {
     font-size: 13px;
     font-weight: 500;
+    font-size: 13px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+}
+
+
+.logo_img {
+    font-size: 16px;
 }

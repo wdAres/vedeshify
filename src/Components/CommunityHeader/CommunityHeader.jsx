@@ -2,6 +2,11 @@ import React from 'react'
 import classes from './CommunityHeader.module.css'
 import img from '../../assets/testimonial_bg.png'
 import Container from '../../UI/Container/Container'
+import {GoFileMedia} from 'react-icons/go'
+import {AiOutlineFileAdd} from 'react-icons/ai'
+import {IoLocationOutline} from 'react-icons/io5'
+
+
 const CommunityHeader = () => {
   return (
     <Container cls={classes.header}>
@@ -10,11 +15,9 @@ const CommunityHeader = () => {
             <input type="text" value={'Share and ask something to anyone !'} readOnly />
         </div>
         <div className={`${classes.header_bottom}`}>
-            <span>Camera</span>
-            <span>Images</span>
-            <span>Files</span>
-            <span>Video</span>
-            <span>Location</span>
+        <span><GoFileMedia className={classes.logo_img} />Photos & Videos</span>
+          <span><AiOutlineFileAdd className={classes.logo_img} />Files</span>
+          <span><IoLocationOutline className={classes.logo_img} />Location</span>
         </div>
     </Container>
   )

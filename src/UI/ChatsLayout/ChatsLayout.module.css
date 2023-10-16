@@ -1,7 +1,8 @@
 .container {
     display: flex;
     justify-content: space-between;
-    height: 83vh;
+    /* height: 83vh; */
+    height: 440px;
 }
 
 @media screen and (max-width:900px) {
@@ -9,4 +10,8 @@
         position: relative;
         overflow: hidden;
     }
+    .container {
+        height: 79vh;
+    }
+    
 }
