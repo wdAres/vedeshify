@@ -5,6 +5,7 @@ import search from '../../assets/search.png'
 import setting from '../../assets/setting.png'
 import calender from '../../assets/cal.png'
 import alert from '../../assets/alert.png'
+import bell from '../../assets/bell.png'
 import dp from '../../assets/dp.png'
 import cd from '../../assets/cd.png'
 import { Link } from 'react-router-dom'
@@ -30,8 +31,7 @@ const Navbar = (props) => {
         </div>
         <div className={classes.nav_body}>
           <div onClick={()=>setNotification(!notification)} className={classes.nav_btn}>
-            {/* <img src={<>} alt="" /> */}
-            <BsBell />
+          <img src={bell} alt="" />
           </div>
           <Link to={'/support'} className={classes.nav_btn}>
             <img src={setting} alt="" />

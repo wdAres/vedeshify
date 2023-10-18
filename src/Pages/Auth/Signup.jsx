@@ -1,11 +1,29 @@
-import React from 'react'
+import React, { useState } from 'react'
 import classes from './Login.module.css'
 import Heading from '../../Components/Heading/Heading'
 import LabelledInput from '../../Components/LabelledInput/LabelledInput'
 import BlackButton from '../../Components/BlackButton/BlackButton'
 import { Link } from 'react-router-dom'
 import logo from '../../assets/logo_new.png'
+
+// Importing actions from athSlice
+import { authActions } from '../../store/authSlice'
+import { useDispatch } from 'react-redux'
+
 const Signup = () => {
+    const dispatch = useDispatch()
+    // Form States
+    const [email,setEmail] = useState('')
+    const [passowrd,setPassowrd] = useState('')
+
+    const submitForm = (e) => {
+        e.preventDefault()
+        dispatch(authActions.signup({
+            email,
+            passowrd,
+            returnSecureToken:true
+        }))
+    }
 
     return (
         <>
@@ -19,12 +37,12 @@ const Signup = () => {
             </div>
             <div className={classes.right}>
                 <Heading heading={'Get started with Videshify'} p={'Borem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.'} cls={classes.reversed} />
-                <form  className={classes.form}>
+                <form onSubmit={submitForm}  className={classes.form}>
 
-                    <LabelledInput ph={'Name'} id={'name'} type={'text'}  />
-                    <LabelledInput ph={'Email'} id={'email'} type={'email'}  />
-                    <LabelledInput ph={'Phone Number'} id={'number'} type={'text'}  />
-                    <LabelledInput ph={'Password'} id={'password'} type={'password'}  />
+                    {/* <LabelledInput ph={'Name'} id={'name'} type={'text'}  /> */}
+                    {/* <LabelledInput ph={'Phone Number'} id={'number'} type={'text'}  /> */}
+                    <LabelledInput changeFunc={setEmail} ph={'Email'} id={'email'} type={'email'}  />
+                    <LabelledInput changeFunc={setPassowrd} ph={'Password'} id={'password'} type={'password'}  />
 
 
                     <BlackButton type={'submit'}>Signup</BlackButton>

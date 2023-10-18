@@ -10,14 +10,14 @@ import Container from '../../UI/Container/Container'
 import BlackButton from '../../Components/BlackButton/BlackButton'
 const Inp_data = [
     {
-        label: 'First Name',
-        id: 'first_name',
-        value: 'Puneet Shrivastav'
+        label: 'Individual & Agency',
+        id: 'indi-agecy',
+        value: 'Videshify'
     },
     {
-        label: 'Last Name',
-        id: 'last_name',
-        value: 'Shrivastav'
+        label: 'Name of Individual',
+        id: 'first_name',
+        value: 'Puneet Shrivastav'
     },
     {
         label: 'Email',
@@ -30,44 +30,34 @@ const Inp_data = [
         value: '9211901934'
     },
     {
+        label: 'Education Level Degree',
+        id: 'eld',
+        value: 'B.Tech'
+    },
+    {
+        label: 'Number Of Previous Students Admittied',
+        id: 'ss',
+        value: '60'
+    },
+    {
+        label: 'Number of years as a counselor',
+        id: 'ss',
+        value: '60'
+    },
+    {
         label: 'Gender',
         id: 'Gender',
         value: 'Male'
     },
     {
-        label: 'Age',
-        id: 'Age',
-        value: '21'
-    },
-    {
-        label: 'University Name',
-        id: 'University Name',
-        value: 'IGNOU'
-    },
-    {
-        label: 'High School Name',
-        id: 'High School Name',
-        value: 'SKV'
-    },
-    {
-        label: 'Degree Persued',
-        id: 'Degree Persued',
-        value: 'BCA'
-    },
-    {
-        label: 'Upload Resume',
-        id: 'Upload Resume',
-        value: 'Resume.pdf'
-    },
-    {
-        label: 'Number Of previous Students Admitted',
-        id: 'Number Of previous Students Admitted',
-        value: 23
-    },
-    {
-        label: 'City Live In',
-        id: 'City Live In',
+        label: 'City',
+        id: 'city',
         value: 'New Delhi'
+    },
+    {
+        label: 'Country Of Origin',
+        id: 'coo',
+        value: 'India'
     },
 ]
 
@@ -76,17 +66,7 @@ const ta_data = [
         label: 'Bio',
         id: 'bio',
         value: 'Norem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque. Ut diam quam, semper iaculis condimentum ac, vestibulum eu nisl. Norem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque. Ut diam quam, semper iaculis condimentum ac, vestibulum eu nisl.'
-    },
-    {
-        label: 'Past Experience (Writing)',
-        id: 'Past Experience (Writing)',
-        value: 'Norem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque. Ut diam quam, semper iaculis condimentum ac, vestibulum eu nisl.'
-    },
-    {
-        label: 'Past Experience (English)',
-        id: 'Past Experience (English)',
-        value: 'Norem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque. Ut diam quam, semper iaculis condimentum ac, vestibulum eu nisl.'
-    },
+    }
 ]
 
 
@@ -123,15 +103,15 @@ const IndividualDetails = () => {
                 <div className={classes.flex}>
                     {/* All Inputs */}
                     {Inp_data.map((element, index) => (
-                        <LabelledInput id={element.id} value={element.value} label={element.label} ro={true} />
+                        <LabelledInput id={element.id} value={element.value} label={element.label}  />
                     ))}
                     {/* All TextAreas */}
                     {ta_data.map((element, index) => (
-                        <LabelledTextarea id={element.id} value={element.value} label={element.label} ro={true} />
+                        <LabelledTextarea id={element.id} value={element.value} label={element.label}  />
                     ))}
 
                     <div className={classes.wd}>
-                        <h3 className={classes.heading}>Testimonials</h3>
+                        <h3 className={classes.heading}>Intro Video</h3>
                         <div className={classes.flex3}>
                             <FileLabel id='1' />
                         </div>
@@ -145,7 +125,7 @@ const IndividualDetails = () => {
                     <div className={classes.flex}>
                         {/* All Inputs */}
                         {ba_details.map((element, index) => (
-                            <LabelledInput id={element.id} value={element.value} label={element.label} ro={true} />
+                            <LabelledInput id={element.id} value={element.value} label={element.label}  />
                         ))}
                     </div>
                 </div>

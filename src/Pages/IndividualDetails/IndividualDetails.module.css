@@ -11,7 +11,8 @@
 }
 
 .container {
-    padding: 20px;
+    padding: 0px;
+    border: none;
 }
 
 .flex {
@@ -23,7 +24,7 @@
 }
 
 .flex>div:has(input[type="text"]) {
-    width: 30%;
+    width: 32%;
 }
 
 .heading {
@@ -43,6 +44,26 @@
 
 .wd {
     width: 100%;
+}
+
+.end {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    column-gap: 10px;
+}
+
+.cancel_btn {
+    height: 40px;
+    display: flex;
+    width: 150px;
+    justify-content: center;
+    align-items: center;
+    background: #efefef;
+    border-radius: var(--br);
+    font-weight: 600;
+    border: none;
 }
 
 
@@ -65,24 +86,9 @@
     row-gap: 20px;
 }
 
-.end {
-    margin-top: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: end;
-    column-gap: 10px;
-}
 
-.cancel_btn {
-    height: 40px;
-    display: flex;
-    width: 150px;
-    justify-content: center;
-    align-items: center;
-    background: #efefef;
-    border-radius: var(--br);
-    font-weight: 600;
-}
+
+
 
 .bb {
     width: 150px;

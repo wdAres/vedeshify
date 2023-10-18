@@ -50,10 +50,12 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  height: 40px;
+  width: 40px;
 }
 
 .nav_btn>img {
-  width: 20px;
+  width: 18px;
 }
 
 .nav_profile{
