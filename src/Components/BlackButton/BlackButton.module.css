@@ -8,4 +8,10 @@
     color: white;
     border-radius: var(--br);
     border: none;
+    border: 1px solid transparent;
+}
+
+.button:disabled{
+    background: #e9e0e0;
+    border: 1px solid var(--border);
 }

@@ -5,6 +5,7 @@ import './index.css'
 import { BrowserRouter as Router } from 'react-router-dom'
 import ScrollToTop from './UI/ScrollToTop/ScrollToTop.jsx'
 import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
 import reduxStore from './store/reduxStore.jsx'
 import { Provider } from 'react-redux'
 
@@ -20,6 +21,7 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+export const db = getFirestore(app)
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <Provider store={reduxStore}>

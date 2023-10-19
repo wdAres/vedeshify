@@ -5,7 +5,6 @@ const BlackButton = (props) => {
 
   const run = () => {
     if (props.func) {
-      // console.log('hello');
        props.func(!props.funcVal)
     }
 
@@ -17,8 +16,8 @@ const BlackButton = (props) => {
   }
 
   return (
-    <button onClick={run} className={`${classes.button} ${props.cls}`}>
-        {props.children}
+    <button onClick={run} disabled={props.disabled} className={`${classes.button} ${props.cls}`}>
+        {props.disabled == true ? '...Loading' : props.children }
     </button>
   )
 }
