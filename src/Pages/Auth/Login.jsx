@@ -6,14 +6,17 @@ import BlackButton from '../../Components/BlackButton/BlackButton'
 import { Link, useNavigate } from 'react-router-dom'
 import logo from '../../assets/logo_new.png'
 import { useForm } from 'react-hook-form'
-import { createUserWithEmailAndPassword, getAuth, signInWithEmailAndPassword } from 'firebase/auth'
+import {getAuth, signInWithEmailAndPassword } from 'firebase/auth'
 import { doc, getDoc, updateDoc } from 'firebase/firestore'
 import { db } from '../../main'
+import { authActions } from '../../store/authSlice'
+import { useDispatch } from 'react-redux'
 const Login = () => {
 
     const navigate = useNavigate()
     const [isLoading, setIsLoading] = useState(false)
     const { register, handleSubmit, reset } = useForm();
+    const dispatch = useDispatch()
 
     const onSubmit = async (formData) => {
         try {
@@ -24,26 +27,32 @@ const Login = () => {
             const result = response.user
 
             await updateDoc(doc(db, 'users', result.uid), {
-                isOnline:false
-            } )
+                isOnline: true
+            })
 
-            const docRef = doc(db, "cities", "SF");
-const docSnap = await getDoc(docRef);
-            console.log(details);
+            const docRef = doc(db, "users", result.uid);
+            const docSnap = await getDoc(docRef);
 
-            alert('Signin Compllete')
+            sessionStorage.setItem('user', JSON.stringify(docSnap.data()))
 
-            // navigate('/dashboard')
+            dispatch(authActions.login({
+                data: docSnap.data()
+            }))
+
+            navigate('/dashboard')
 
         } catch (error) {
             console.log(error);
         }
         finally {
-            // reset()
+            reset()
             setIsLoading(false)
         }
     }
 
+    const nextPage = () => {
+        return navigate('/dashboard')
+    }
 
     return (
         <>
@@ -63,7 +72,7 @@ const docSnap = await getDoc(docRef);
                         <LabelledInput register={register} name={'password'} ph={'Password'} id={'password'} type={'password'} />
 
 
-                        <BlackButton disabled={isLoading} type={'submit'}>Login</BlackButton>
+                        <BlackButton disabled={isLoading} click={true} func2={nextPage} type={'button'}>Login</BlackButton>
                         <p>Don't Remeber Password ? <Link to={'/auth-forget'}>Forget Password</Link></p>
                     </form>
                     <p className={classes.p}>

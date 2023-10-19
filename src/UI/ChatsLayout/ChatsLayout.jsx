@@ -5,12 +5,12 @@ import ChatsMain from '../../Components/ChatsMain/ChatsMain'
 
 const ChatsLayout = () => {
 
-  const [isActive,setActive] = useState(false)
+  const [isActive, setActive] = useState(false)
 
   return (
     <div className={classes.container}>
-        <ChatsSidebar Func={setActive} value={isActive} />
-        <ChatsMain value={isActive} />
+      <ChatsSidebar  Func={setActive} value={isActive} />
+      <ChatsMain  value={isActive} />
     </div>
   )
 }

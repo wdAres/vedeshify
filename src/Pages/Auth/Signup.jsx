@@ -9,6 +9,9 @@ import { useForm } from 'react-hook-form'
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { doc, setDoc } from "firebase/firestore";
 import { db } from '../../main'
+import { useDispatch } from 'react-redux'
+import { authActions } from '../../store/authSlice'
+import { signup } from '../../thunkActions/authThunk'
 
 
 const Signup = () => {
@@ -16,29 +19,13 @@ const Signup = () => {
     const navigate = useNavigate()
     const [isLoading, setIsLoading] = useState(false)
     const { register, handleSubmit, reset } = useForm();
+    const dispatch = useDispatch()
+
     const onSubmit = async (formData) => {
+
         try {
             setIsLoading(true)
-            const auth = getAuth()
-            const response = await createUserWithEmailAndPassword(auth, formData.email, formData.password);
-            const result = response.user
-            
-
-            const userProfile = {
-                name: formData.name,
-                email: formData.email,
-                phone: formData.phone,
-                uid: result.uid,
-                isOnline: true,
-                createdAt: new Date()
-            }
-
-            await setDoc(doc(db, 'users', result.uid), userProfile );
-
-            localStorage.setItem('user', JSON.stringify({...userProfile, ...result }));
-            console.log('User logged in successfully...!');
-
-            navigate('/dashboard')
+            dispatch(signup(formData))
 
         } catch (error) {
             console.log(error);

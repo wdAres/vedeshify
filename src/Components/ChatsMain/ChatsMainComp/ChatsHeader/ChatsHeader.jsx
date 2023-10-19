@@ -8,18 +8,20 @@ import help from '../../../../assets/help.png'
 import { BsThreeDotsVertical } from "react-icons/bs";
 import SearchBar from '../../../SearchBar/SearchBar'
 
-const ChatsHeader = () => {
+const ChatsHeader = (props) => {
 
 
   const [menu,setMenu] = useState(false)
   const [sb,setSb] = useState(false)
+
+  console.log(props.userDetails)
 
   return (
     <div className={classes.header}>
     <div>
       <ChatDp />
       <div>
-        <h3>Puneet Shrivastav Group</h3>
+        <h3>{props?.userDetails?.name}</h3>
         <p>@pueeetsrivastav</p>
       </div>
     </div>

@@ -35,8 +35,6 @@ import IndividualDetails from './Pages/IndividualDetails/IndividualDetails'
 // dotenv.config()
 
 
-
-
 const App = () => {
   const location = useLocation();
   const path = location.pathname;
@@ -44,6 +42,8 @@ const App = () => {
   // console.log(import.meta.env.VITE_DEMO);
 
   // alert(import.meta.env.VITE_DEMO)
+
+  
 
 
   return (

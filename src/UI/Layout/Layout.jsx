@@ -4,8 +4,10 @@ import classes from './Layout.module.css'
 import Navbar from '../../Components/Navbar/Navbar'
 import Sidebar from '../../Components/Sidebar/Sidebar'
 import { useLocation, useNavigate } from 'react-router-dom'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { useEffect } from 'react'
+import { authActions } from '../../store/authSlice'
+import { parse } from 'dotenv'
 
 
 
@@ -16,18 +18,28 @@ const Layout = (props) => {
   const [sidebar, setSidebar] = useState(false)
   const navigate = useNavigate()
 
-  const isLoggedIn = useSelector(state => state.auth.isLoggedIn)
-  console.log(isLoggedIn);
+  // const isLoggedIn = useSelector(state => state.auth.isLoggedIn)
+  // console.log(isLoggedIn);
 
   const sidebarToggleHandler = () => {
     sidebar === true ? setSidebar(false) : setSidebar(true)
   }
 
-  useEffect(() => {
-    if (!localStorage.getItem('user')) {
-      navigate('/')
-    }
-  }, [])
+  const dispatch = useDispatch()
+
+
+  // useEffect(() => {
+  //   if (sessionStorage.getItem('user')) {
+  //     const user = JSON.parse(sessionStorage.getItem('user'))
+  //     console.log(user)
+  //     dispatch(authActions.login({
+  //       data:user
+  //     }))
+  //   }
+  //   else{
+  //     navigate('/')
+  //   }
+  // }, [])
 
 
   return (

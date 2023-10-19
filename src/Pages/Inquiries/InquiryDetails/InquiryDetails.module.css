@@ -2,7 +2,7 @@
     padding: 20px;
     background: white;
     border-radius: var(--br);
-    border: 1px solid var(--border);
+    border: solid var(--border);
     display: flex;
     flex-wrap: wrap;
     row-gap: 20px;
@@ -27,7 +27,7 @@
 
 .txtarea>textarea {
     border-radius: var(--br);
-    border: 1px solid var(--border);
+    border: solid var(--border);
     height: 40px;
     padding-left: 10px;
     font-size: 14px;
@@ -45,7 +45,7 @@
     display: flex;
     justify-content: end;
     column-gap: 10px;
-    border-top: 1px solid var(--border);
+    border-top: solid var(--border);
     padding-top: 20px;
 }
 
@@ -59,8 +59,95 @@
 
 
 
-@media screen and (max-width:750px){
-    .form > div {
+@media screen and (max-width:750px) {
+    .form>div {
         width: 100%;
     }
+}
+
+
+/* Shriya css file */
+
+.details_box {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    margin-bottom: 30px;
+    width: 300px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.h6 {}
+
+.span {}
+
+
+.container {}
+
+.box {
+    padding: 20px;
+    border-bottom: 1px solid var(--border);
+}
+.container  > div:nth-child(2){
+    padding: 20px;
+    border-bottom: none !important;
+}
+
+.inner_box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.h4 {
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.span {
+    font-weight: 400;
+    color: #858080;
+    font-size: 14px;
+}
+
+.box p{
+    margin-top: 15px;
+    font-size: 15px;
+}
+
+.btns{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    column-gap: 10px;
+    padding: 20px;
+}
+
+.btns > button{
+    width: 160px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--br);
+    font-weight:500 ;
+    border: none;
+    cursor: pointer;
+}
+
+.btns > button:nth-child(1){
+    background-color: #D5D5D5;
+    color: black;
+}
+
+.btns > button:nth-child(2){
+    background-color: black;
+    color: white;
 }

@@ -7,7 +7,7 @@ import ChatsFooter from './ChatsMainComp/ChatsFooter/ChatsFooter'
 const ChatsMain = (props) => {
   return (
     <Container cls={`${classes.container} ${props.value===true?classes.active:""}`}>
-      <ChatsHeader />
+      <ChatsHeader userData={props.userDetails} />
       <div className={classes.chat_body}>
         <div className={classes.reply}>
           <span className={classes.person}>Puneet Shrivastav</span>
