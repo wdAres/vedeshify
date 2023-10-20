@@ -14,15 +14,17 @@ const ChatsHeader = (props) => {
   const [menu,setMenu] = useState(false)
   const [sb,setSb] = useState(false)
 
-  console.log(props.userDetails)
+  // console.log(props.userDetails)
 
   return (
     <div className={classes.header}>
     <div>
       <ChatDp />
       <div>
-        <h3>{props?.userDetails?.name}</h3>
-        <p>@pueeetsrivastav</p>
+        <h3>Puneet Shrivastav</h3>
+        <p>@puneet</p>
+        {/* <h3>{props.userData?.name}</h3>
+        <p>{props.userData?.uid}</p> */}
       </div>
     </div>
     <div className={`${classes.menu} ${menu===true?classes.menu_active:''}`}>

@@ -8,6 +8,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useEffect } from 'react'
 import { authActions } from '../../store/authSlice'
 import { parse } from 'dotenv'
+import { isLoggedInUser } from '../../thunkActions/authThunk'
 
 
 
@@ -27,6 +28,7 @@ const Layout = (props) => {
 
   const dispatch = useDispatch()
 
+  dispatch(isLoggedInUser())
 
   // useEffect(() => {
   //   if (sessionStorage.getItem('user')) {

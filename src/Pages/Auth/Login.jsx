@@ -52,12 +52,15 @@ const Login = () => {
         }
     }
 
-    dispatch(isLoggedInUser())
+    // dispatch(isLoggedInUser())
 
-    if (auth.isLoggedIn) {
-        return navigate('/dashboard')
+    // if (auth.isLoggedIn) {
+    //     return navigate('/dashboard')
+    // }
+
+    const nextPage = () => {
+        navigate('/dashboard')
     }
-
 
     return (
         <>
@@ -77,7 +80,8 @@ const Login = () => {
                         <LabelledInput register={register} name={'password'} ph={'Password'} id={'password'} type={'password'} />
 
 
-                        <BlackButton disabled={isLoading} type={'submit'}>Login</BlackButton>
+                        {/* <BlackButton disabled={isLoading} func2={nextPage}  type={'submit'}>Login</BlackButton> */}
+                        <BlackButton  func2={nextPage}  type={'button'}>Login</BlackButton>
                         <p>Don't Remeber Password ? <Link to={'/auth-forget'}>Forget Password</Link></p>
                     </form>
                     <p className={classes.p}>
