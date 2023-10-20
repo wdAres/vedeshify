@@ -14,12 +14,15 @@ const ChatsSidebar = (props) => {
   const dispatch = useDispatch()
   const authDetails = useSelector(state => state.auth)
   const activeUsers = useSelector(state => state.user)
-  console.log(authDetails.data.uid)
+
+
+
+  console.log(authDetails)
   // console.log(activeUsers.users.length);
 
-  useEffect(() => {
-    dispatch(getActiveUsers(authDetails.data.uid))
-  }, [])
+  // useEffect(() => {
+    // dispatch(getActiveUsers(authDetails.data.uid))
+  // }, [])
 
   return (
     <Container cls={classes.sidebar}>

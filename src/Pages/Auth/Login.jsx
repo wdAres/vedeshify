@@ -10,13 +10,15 @@ import {getAuth, signInWithEmailAndPassword } from 'firebase/auth'
 import { doc, getDoc, updateDoc } from 'firebase/firestore'
 import { db } from '../../main'
 import { authActions } from '../../store/authSlice'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import { isLoggedInUser } from '../../thunkActions/authThunk'
 const Login = () => {
 
     const navigate = useNavigate()
     const [isLoading, setIsLoading] = useState(false)
     const { register, handleSubmit, reset } = useForm();
     const dispatch = useDispatch()
+    const auth = useSelector(state=>state.auth)
 
     const onSubmit = async (formData) => {
         try {
@@ -50,9 +52,12 @@ const Login = () => {
         }
     }
 
-    const nextPage = () => {
+    dispatch(isLoggedInUser())
+
+    if (auth.isLoggedIn) {
         return navigate('/dashboard')
     }
+
 
     return (
         <>
@@ -72,7 +77,7 @@ const Login = () => {
                         <LabelledInput register={register} name={'password'} ph={'Password'} id={'password'} type={'password'} />
 
 
-                        <BlackButton disabled={isLoading} click={true} func2={nextPage} type={'button'}>Login</BlackButton>
+                        <BlackButton disabled={isLoading} type={'submit'}>Login</BlackButton>
                         <p>Don't Remeber Password ? <Link to={'/auth-forget'}>Forget Password</Link></p>
                     </form>
                     <p className={classes.p}>

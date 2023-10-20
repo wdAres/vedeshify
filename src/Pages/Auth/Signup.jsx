@@ -9,9 +9,9 @@ import { useForm } from 'react-hook-form'
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { doc, setDoc } from "firebase/firestore";
 import { db } from '../../main'
-import { useDispatch } from 'react-redux'
-import { authActions } from '../../store/authSlice'
-import { signup } from '../../thunkActions/authThunk'
+import { useDispatch, useSelector } from 'react-redux'
+import authSlice, { authActions } from '../../store/authSlice'
+import { isLoggedInUser, signup } from '../../thunkActions/authThunk'
 
 
 const Signup = () => {
@@ -20,6 +20,7 @@ const Signup = () => {
     const [isLoading, setIsLoading] = useState(false)
     const { register, handleSubmit, reset } = useForm();
     const dispatch = useDispatch()
+    const auth = useSelector(state=>state.auth)
 
     const onSubmit = async (formData) => {
 
@@ -35,6 +36,14 @@ const Signup = () => {
             setIsLoading(false)
         }
     };
+
+    // console.log(auth.isLoggedIn)
+
+    dispatch(isLoggedInUser())
+
+    if (auth.isLoggedIn) {
+        return navigate('/dashboard')
+    }
 
     return (
         <>

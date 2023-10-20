@@ -1,24 +1,27 @@
 import { createUserWithEmailAndPassword, getAuth } from "firebase/auth";
 import { doc, setDoc } from "firebase/firestore";
 import { db } from "../main";
+import { useNavigate } from "react-router-dom";
+import { authActions } from "../store/authSlice";
 
 
-export const signup = formData => {
+export const signup = (formData) => {
     return async dispatch => {
-        try {
             const auth = getAuth()
             const response = await createUserWithEmailAndPassword(auth, formData.email, formData.password);
+
+            const result = response.user
 
             const userProfile = {
                 name: formData.name,
                 email: formData.email,
                 phone: formData.phone,
-                uid: response.uid,
+                uid: result.uid,
                 isOnline: true,
                 createdAt: new Date()
             }
 
-            await setDoc(doc(db, 'users', response.uid), userProfile);
+            await setDoc(doc(db, 'users', result.uid), userProfile);
 
 
             dispatch(authActions.login({
@@ -28,8 +31,25 @@ export const signup = formData => {
             sessionStorage.setItem('user', JSON.stringify(userProfile));
 
             
-        } catch (error) {
-            console.log(error);
-        }
     }
 } 
+
+
+
+
+export const isLoggedInUser = () => {
+    return async dispatch => {
+
+        const user = sessionStorage.getItem('user') ? JSON.parse(sessionStorage.getItem('user')) : null;
+
+        if(user){
+           dispatch(authActions.login({
+            data:user
+           }))
+        }else{
+            console.log('Please login!');
+        }
+
+
+    }
+}
