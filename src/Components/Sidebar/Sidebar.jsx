@@ -17,6 +17,7 @@ import i9  from "../../assets/Icons/resource_icon.svg";
 import i10  from "../../assets/Icons/roles_icon.svg";
 import i11  from "../../assets/Icons/profile_icon.svg";
 import i12 from "../../assets/Icons/message_icon.svg";
+import i from "../../assets/Icons/svg_ic.svg";
 
 import {ReactSVG} from 'react-svg';
 const Sidebar = (props) => {
@@ -54,7 +55,7 @@ const Sidebar = (props) => {
         <ReactSVG className={classes.svg} src={i9} /> Inquiries
         </NavLink>
         <NavLink className={classes.link} to={'/booking'}>
-        <ReactSVG className={classes.svg} src={i2} /> Booking
+        <ReactSVG className={classes.svg} src={i} /> Booking
         </NavLink>
         <NavLink className={classes.link} to={'/services'}>
         <ReactSVG className={classes.svg} src={i4} /> Services
