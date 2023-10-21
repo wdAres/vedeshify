@@ -28,7 +28,7 @@ const data = [
 const LeftSidebar = () => {
     return (
         <div className={`${classes.sidebar}`}>
-            <MapParent heading={'Community Pages'}>
+            <MapParent heading={'Categories'}>
                 {data.map((element, index) => (
                     <EventDiv p={element.p} h5={element.h5} h6={element.h6} key={index} />
                 ))}
