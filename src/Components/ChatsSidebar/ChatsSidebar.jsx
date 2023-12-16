@@ -8,19 +8,19 @@ import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { getActiveUsers } from '../../store/chatThunk'
 
-
 const ChatsSidebar = (props) => {
 
-  // const dispatch = useDispatch()
-  // const authDetails = useSelector(state => state.auth)
-  // const activeUsers = useSelector(state => state.user)
+  const dispatch = useDispatch()
+  const authDetails = useSelector(state => state.auth)
+  const activeUsers = useSelector(state => state.user)
 
-  // console.log(authDetails.data)
+  console.log(authDetails)
   // console.log(activeUsers.users.length);
 
-  // useEffect(() => {
-  //   dispatch(getActiveUsers(authDetails.data.uid))
-  // }, [])
+  useEffect(() => {
+    // dispatch()
+    dispatch(getActiveUsers(authDetails.data.uid))
+  }, [])
 
   return (
     <Container cls={classes.sidebar}>
@@ -28,12 +28,12 @@ const ChatsSidebar = (props) => {
       <div className={classes.active_box}>
         <h3 className={classes.sidebar_heading}>Active</h3>
         <div className={classes.ab_container}>
-          {/* {
+          {
             activeUsers.users.length > 0 && activeUsers.users.map((element) => (
               <ChatDp updateProfile={props.updateProfile} key={element.uid} data={element}  />
             ))
-          } */}
-          <ChatDp />
+          }
+          {/* <ChatDp /> */}
         </div>
       </div>
       <div className={classes.sidebar_body}>

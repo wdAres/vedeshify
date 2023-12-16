@@ -13,7 +13,6 @@ export const getActiveUsers = (uid) => {
         const unsubscribe = onSnapshot(q, (querySnapshot) => {
             const users = [];
             querySnapshot.forEach((doc) => {
-                // console.log(doc.data());
                 if (doc.data().uid !== uid) {
                     users.push(doc.data())
                 }

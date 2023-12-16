@@ -21,42 +21,42 @@ const Login = () => {
     const auth = useSelector(state=>state.auth)
 
     const onSubmit = async (formData) => {
-        try {
-            setIsLoading(true)
-            const auth = getAuth()
-            const response = await signInWithEmailAndPassword(auth, formData.email, formData.password)
+        // try {
+        //     setIsLoading(true)
+        //     const auth = getAuth()
+        //     const response = await signInWithEmailAndPassword(auth, formData.email, formData.password)
 
-            const result = response.user
+        //     const result = response.user
 
-            await updateDoc(doc(db, 'users', result.uid), {
-                isOnline: true
-            })
+        //     await updateDoc(doc(db, 'users', result.uid), {
+        //         isOnline: true
+        //     })
 
-            const docRef = doc(db, "users", result.uid);
-            const docSnap = await getDoc(docRef);
+        //     const docRef = doc(db, "users", result.uid);
+        //     const docSnap = await getDoc(docRef);
 
-            sessionStorage.setItem('user', JSON.stringify(docSnap.data()))
+        //     sessionStorage.setItem('user', JSON.stringify(docSnap.data()))
 
-            dispatch(authActions.login({
-                data: docSnap.data()
-            }))
+        //     dispatch(authActions.login({
+        //         data: docSnap.data()
+        //     }))
 
             navigate('/dashboard')
 
-        } catch (error) {
-            console.log(error);
-        }
-        finally {
-            reset()
-            setIsLoading(false)
-        }
+        // } catch (error) {
+        //     console.log(error);
+        // }
+        // finally {
+        //     reset()
+        //     setIsLoading(false)
+        // }
     }
 
-    // dispatch(isLoggedInUser())
+    dispatch(isLoggedInUser())
 
-    // if (auth.isLoggedIn) {
-    //     return navigate('/dashboard')
-    // }
+    if (auth.isLoggedIn) {
+        return navigate('/dashboard')
+    }
 
     const nextPage = () => {
         navigate('/dashboard')
@@ -80,8 +80,8 @@ const Login = () => {
                         <LabelledInput register={register} name={'password'} ph={'Password'} id={'password'} type={'password'} />
 
 
-                        {/* <BlackButton disabled={isLoading} func2={nextPage}  type={'submit'}>Login</BlackButton> */}
-                        <BlackButton  func2={nextPage}  type={'button'}>Login</BlackButton>
+                        <BlackButton disabled={isLoading}  type={'submit'}>Login</BlackButton>
+                        {/* <BlackButton  func2={nextPage}  type={'button'}>Login</BlackButton> */}
                         <p>Don't Remeber Password ? <Link to={'/auth-forget'}>Forget Password</Link></p>
                     </form>
                     <p className={classes.p}>

@@ -34,9 +34,6 @@ export const signup = (formData) => {
     }
 } 
 
-
-
-
 export const isLoggedInUser = () => {
     return async dispatch => {
 
@@ -50,6 +47,6 @@ export const isLoggedInUser = () => {
             console.log('Please login!');
         }
 
-
     }
 }
+

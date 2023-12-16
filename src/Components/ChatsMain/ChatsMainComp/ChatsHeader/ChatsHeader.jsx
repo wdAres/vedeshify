@@ -21,10 +21,10 @@ const ChatsHeader = (props) => {
     <div>
       <ChatDp />
       <div>
-        <h3>Puneet Shrivastav</h3>
-        <p>@puneet</p>
-        {/* <h3>{props.userData?.name}</h3>
-        <p>{props.userData?.uid}</p> */}
+        {/* <h3>Puneet Shrivastav</h3>
+        <p>@puneet</p> */}
+        <h3>{props.userData?.name}</h3>
+        <p>{props.userData?.uid}</p>
       </div>
     </div>
     <div className={`${classes.menu} ${menu===true?classes.menu_active:''}`}>
