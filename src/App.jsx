@@ -39,7 +39,7 @@ const App = () => {
   const location = useLocation();
   const path = location.pathname;
 
-  // console.log(import.meta.env.VITE_DEMO);
+  console.log(import.meta.env.VITE_DEMO);
 
   // alert(import.meta.env.VITE_DEMO)
 
